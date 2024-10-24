@@ -1,0 +1,79 @@
+/* Reseteo básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo para el título principal */
+header {
+  background-color: #3498db;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  height: 80px;  /* Definimos la altura del header */
+}
+
+/* Desplaza el contenido hacia abajo para dejar espacio al título */
+.container {
+  display: flex;
+  flex-direction: row;
+  margin-top: 80px;  /* Ajusta este valor según la altura del header */
+  height: calc(100vh - 80px);  /* Asegura que todo el contenido ocupe la pantalla */
+}
+
+/* Ajustamos el tamaño del índice */
+.indice {
+  width: 20%;  /* Usa el 20% del ancho de la pantalla para el menú */
+  position: fixed;
+  top: 80px;  /* Mueve el índice hacia abajo para dejar espacio al header */
+  left: 0;
+  background-color: #f0f0f0;
+  padding: 20px;
+  height: calc(100vh - 80px);  /* Calcula la altura restante para el índice */
+  overflow-y: auto;
+}
+
+/* Ajustamos el tamaño del contenido principal */
+main {
+  margin-left: 20%;  /* Comienza a la derecha del índice */
+  width: 80%;  /* Usa el 80% restante del ancho de la pantalla */
+  padding: 20px;
+  overflow-y: auto;
+  height: calc(100vh - 80px);  /* Asegura que todo el contenido ocupe la pantalla */
+}
+
+/* Secciones */
+main section {
+  margin-top: 0;
+  padding-top: 0;  /* Elimina cualquier margen o padding innecesario */
+  margin-bottom: 50px; /* Espaciado entre secciones */
+}
+
+/* Alternativa con scroll-padding para evitar que el contenido quede oculto por el header */
+html {
+  scroll-padding-top: 80px;  /* Ajusta el desplazamiento automático al hacer clic en los enlaces */
+}
+
+/* Estilo de los enlaces del índice */
+.indice ul {
+  list-style: none;
+}
+
+.indice a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+  padding: 10px;
+  margin-bottom: 5px;
+}
+
+.indice a.active {
+  background-color: #3498db;
+  color: white;
+}
