@@ -77,3 +77,13 @@ html {
   background-color: #3498db;
   color: white;
 }
+
+
+.bloqueCodigo {
+  background-color: #f4f4f4; /* Fondo claro */
+  border: 1px solid #ccc;   /* Borde */
+  padding: 10px;            /* Espaciado interno */
+  border-radius: 5px;      /* Bordes redondeados */
+  overflow: auto;           /* Permitir scroll si es necesario */
+}
+
