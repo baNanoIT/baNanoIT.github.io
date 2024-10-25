@@ -19,9 +19,9 @@ html, body {
 
 .consola-contenedor {
     font-family:Khula;
-    font-size:3vw;
+    font-size:6vw;
     text-align:center;
-    height: 5vw;
+    height: 12vw;
     width: 100%;
     display: flex; 
     align-items: center; 
