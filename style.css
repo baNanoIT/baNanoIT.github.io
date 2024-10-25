@@ -7,7 +7,7 @@
 
 /* Estilo para el título principal */
 header {
-  background-color: #3498db;
+  background-color: #521352;
   color: white;
   padding: 20px;
   text-align: center;
@@ -29,11 +29,12 @@ header {
 
 /* Ajustamos el tamaño del índice */
 .indice {
-  width: 20%;  /* Usa el 20% del ancho de la pantalla para el menú */
+  width: 20%;
+  font-family: 'Source Sans Pro', sans-serif;
   position: fixed;
-  top: 80px;  /* Mueve el índice hacia abajo para dejar espacio al header */
+  top: 80px;
   left: 0;
-  background-color: #f0f0f0;
+  background-color: #1f1f1f;
   padding: 20px;
   height: calc(100vh - 80px);  /* Calcula la altura restante para el índice */
   overflow-y: auto;
@@ -67,7 +68,8 @@ html {
 
 .indice a {
   text-decoration: none;
-  color: #333;
+  color: #853585;
+  font-weight: bolder;
   display: block;
   padding: 10px;
   margin-bottom: 5px;
@@ -78,12 +80,28 @@ html {
   color: white;
 }
 
+pre {
+  background-color: #6c0094; /* Fondo claro */
+  border: 1px solid #ccc;   /* Borde */
+  padding: 10px;            /* Espaciado interno */
+  border-radius: 5px;      /* Bordes redondeados */
+  overflow: auto;           /* Permitir scroll si es necesario */
+  font-family: monospace;   /* Fuente monoespaciada */
+}
 
 .bloqueCodigo {
-  background-color: #f4f4f4; /* Fondo claro */
-  border: 1px solid #ccc;   /* Borde */
+  background-color: #8b0000; /* Fondo claro */
+  border: 1px solid #ff0000;   /* Borde */
   padding: 10px;            /* Espaciado interno */
   border-radius: 5px;      /* Bordes redondeados */
   overflow: auto;           /* Permitir scroll si es necesario */
 }
 
+h1 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 40px;
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+}
