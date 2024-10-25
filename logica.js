@@ -1,5 +1,5 @@
 // function([string1, string2],target id,[color1,color2])    
-consoleText(['Documentacion TaskProject', 'Flare Dev. Team', 'Instituto Tecnologico de Tepic', 'Desarrollo de Servicios Web'], 'text',['#D4AC0D','#17A589','#00796B', '#00274D']);
+consoleText(['Documentacion TaskProject', 'Flare Dev. Team', 'Instituto Tecnologico de Tepic', 'Desarrollo de Servicios Web'], 'text',['#FFD700','#1E90FF', '#FF4500', '#00FF00', ]);
 
 function consoleText(words, id, colors) {
   if (colors === undefined) colors = ['#fff'];
