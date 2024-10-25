@@ -81,7 +81,7 @@ pre {
 /*###########*/
 h1 {
   font-family: 'Roboto', sans-serif;
-  font-size:2.5vw;
+  font-size:5vw;
   text-align:justify;
   margin-right: 10%;
   margin-left: 10%;
@@ -93,7 +93,7 @@ p {
     width: 80;
     text-align: justify;
     font-family: 'Roboto', sans-serif;
-    font-size:1.8vw;    
+    font-size:3vw;    
     font-weight: 500;
     color: #333333;
     margin-right: 10%;
@@ -118,7 +118,7 @@ p {
 }
 
 #txtFirebase, #txtMongo, #lblRuta, #txtGet, #txtPost, #txtUpdate, #txtDelete {
-  font-size: 1.5vw;
+  font-size: 2vw;
 }
 
 #lblRuta {
@@ -134,7 +134,7 @@ p {
 
 #lblSubAgregar, #lblSubObtener, #lblSubEliminar, #lblSubActualizar, #lblSubCrear, #lblSubFirebase, #lblSubMongo {
   font-family: 'Roboto', sans-serif;
-  font-size: 1.8vw;
+  font-size: 3vw;
   font-weight: bold;
   text-align: justify;
   width: 100%;
@@ -161,7 +161,7 @@ p {
 }
 
 #lblFinal {
-  font-size: 2vw;
+  font-size: 3vw;
   text-align: center;
   color: #5094f4;
 }
@@ -172,7 +172,7 @@ p {
   
   font-family: 'Roboto', sans-serif;
   font-weight: 600;
-  font-size:1.8vw; 
+  font-size:3.5vw; 
   text-align: center; 
   
   margin: 10px; 
