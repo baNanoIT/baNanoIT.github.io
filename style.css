@@ -19,7 +19,7 @@ html, body {
 
 .consola-contenedor {
     font-family:Khula;
-    font-size:6vw;
+    font-size:4vw;
     text-align:center;
     height: 12vw;
     width: 100%;
@@ -55,8 +55,8 @@ main {
 /* Secciones */
 /*###########*/
 main section {
-  margin-top: 50px;
-  margin-bottom: 50px; 
+  margin-top: 3vw;
+  margin-bottom: 3vw; 
 }
   
 
@@ -64,25 +64,24 @@ main section {
 /* Bloques de Ruta */
 /*#################*/
 pre {
-    background-color: #3e3e3e; 
+    background-color: #3e3e3e;
     color: whitesmoke;
-    border: 1px solid #ebebeb;   
-    padding: 20px;            
+    border: 1px solid #ebebeb;             
     margin-left: 10%;
     margin-right: 10%;
     border-radius: 10px;      
+    padding-left: 3%;
     overflow: auto;          
     font-family: monospace;   
-    font-size: 27px;
+    font-size:1.2vw;
 }
-  
 
 /*###########*/
 /*Encabezados*/
 /*###########*/
 h1 {
   font-family: 'Roboto', sans-serif;
-  font-size: 80px;
+  font-size:2.5vw;
   text-align:justify;
   margin-right: 10%;
   margin-left: 10%;
@@ -94,7 +93,7 @@ p {
     width: 80;
     text-align: justify;
     font-family: 'Roboto', sans-serif;
-    font-size: 50px;
+    font-size:1.8vw;    
     font-weight: 500;
     color: #333333;
     margin-right: 10%;
@@ -118,6 +117,10 @@ p {
   opacity: 60%;
 }
 
+#txtFirebase, #txtMongo, #lblRuta, #txtGet, #txtCreate, #txtUpdate, #txtDelet{
+  font-size: 1.5vw;
+}
+
 #lblRuta {
   font-weight: lighter;
   color: #f1f1f1;
@@ -131,7 +134,7 @@ p {
 
 #lblSubAgregar, #lblSubObtener, #lblSubEliminar, #lblSubActualizar, #lblSubCrear, #lblSubFirebase, #lblSubMongo {
   font-family: 'Roboto', sans-serif;
-  font-size: 70px;
+  font-size: 1.8vw;
   font-weight: bold;
   text-align: justify;
   width: 100%;
@@ -157,13 +160,19 @@ p {
   flex-wrap: wrap; /* Permite que los elementos se ajusten a la siguiente fila si son demasiados */
 }
 
+#lblFinal {
+  font-size: 2vw;
+  text-align: center;
+  color: #5094f4;
+}
+
 #lista li {
   background-color: #3e3e3e; 
   color: whitesmoke; 
   
   font-family: 'Roboto', sans-serif;
   font-weight: 600;
-  font-size: 30px; 
+  font-size:1.8vw; 
   text-align: center; 
   
   margin: 10px; 
@@ -190,8 +199,3 @@ p {
   height: 40%;
 }
 
-@media (min-width: 768px) {
-  #lista li {
-      flex-basis: calc(25% - 20px); /* Cuatro elementos por fila en pantallas medianas */
-  }
-}

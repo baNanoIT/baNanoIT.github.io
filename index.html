@@ -29,9 +29,6 @@
         <li>Estado de la tarea</li>
       </ul>
     </section>
-
-    <br><br><br> <!-- Separación entre Introducción y ConexiónBD -->
-    
     <section>
       <h1 id="lblTitulos">Base de datos</h1>
       <p id="contenido">TaskProject hace uso del formato JSON para poder preservar la información de cada usuario.
@@ -48,50 +45,39 @@
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/New_Firebase_logo.svg/1024px-New_Firebase_logo.svg.png" alt="Imagen 2">
       </div>
       
-      <br>
-      <br>
-      <br>
-      <br>
-
-
       <h2 id="lblSubMongo">MongoDB Atlas</h2>
       <p id="contenido">Para realizar la conexión a la base de datos previamente se debió de haber creado 
         un cluster y una colección. Después de eso obtenemos la dirección URL de acceso a la base de datos 
         que es la información que se manda como paramétro "MongoURL". </p>
       <pre>
         <br>
-        <a id="txtMongo">Método para realizar la conexión con Mongo Atlas</a>  
+  <a id="txtMongo">Método para realizar la conexión con Mongo Atlas</a>  
         <br>
-        <code id="lblRuta">const getMongoConnection = async () => {
-          try {
-            const client = await MongoClient.connect(mongoUrl);
-            return client.db();
-          } catch (error) {
-            console.error(error);
-          }
-        }
-        </code>
-      </pre> 
-      <br>
+  <code id="lblRuta">const getMongoConnection = async () => {
+      try {
+        const client = await MongoClient.connect(mongoUrl);
+        return client.db();
+      } catch (error) {
+        console.error(error);
+      }
+    }
+  </code>
+</pre> 
       <h2 id="lblSubFirebase">Firebase</h2>
       <p id="contenido">Para realizar la conexión a la base de datos previamente se debió de haber creado 
         dicha base de datos en la plataforma Firebase. 
         Firebase facilita la descarga de un archivo .JSON que contiene toda la información para establecer 
         la conexión en el código dicha información va encapsulada en la variable "serviceAccount". 
       </p>
-      <pre>
-        <br>
-        <a id="txtFirebase">Método para realizar la conexión con Firebase</a>  
-        <br>
-        <code id="lblRuta">admin.initializeApp({
-          credential: admin.credential.cert(serviceAccount)
-        });
-        </code>
-      </pre> 
+      <pre><br>
+  <a id="txtFirebase">Método para realizar la conexión con Firebase</a><br>
+  <code id="lblRuta">admin.initializeApp({
+      credential: admin.credential.cert(serviceAccount)
+    });
+</code>
+</pre> 
     </section>
-    
-    <br><br><br> <!-- Separación ConexiónBD y Endpoints -->
-    
+
     <section>
       <h1 id="lblTitulos">Endpoints</h1>
       <p id="contenido">
@@ -107,23 +93,16 @@
         Las solicitudes GET son aquellas que el usuarios sin saberlo manda al servidor para obtener 
         información específica. En este proyecto dicha solicitud puede ir por distintos caminos. 
       </p>
-      
-      <br>
-      
       <p id="contenido">
         La ruta Get All Tasks se ejecuta al momento de querer acceder a toda la información, consultando 
         todas las tareas registrados en la base de datos.
       </p>
       <pre><a id="txtGet"> Get All Tasks</a> <a id="separacion"> |</a> <code id="lblRuta">router.get('/', taskController.getAllTasks);</code></pre>
-      <br>
       <p id="contenido">
         La ruta Get Task By ID se ejecuta cuando el usuario quiere acceder a una tarea en específico 
         (Requiere conocer el ID del proyecto).
       </p>
       <pre><a id="txtGet"> Get Task By ID</a> <a id="separacion">|</a> <code id="lblRuta">router.get('/:id', taskController.getTaskByID);</code></pre>
-     
-      <br>
-      
       <p id="contenido">
         La ruta Get All User se ejecuta al momento de acceder a las taras de un usuario determinado 
         (estamos hablado de una sesión)
@@ -156,6 +135,8 @@
         Las solicitudes DELETE eliminan un recurso de la base de datos de manera permanente.  
       </p><pre><a id="txtDelete"> Delete</a> <a id="separacion">|</a> <code id="lblRuta">router.delete('/:id', taskController.deleteTaskByID);</code></pre> 
     </section>
+    <h2 id="lblFinal">¿Si leyeron la parte de la conexión de la base de datos?</h2>
+    <br>
   </main>
 
   <script src="logica.js"></script>
