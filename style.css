@@ -292,7 +292,7 @@ p {
   }
 } /* Media Query Min 1366*/
 
-@media (max-width: 800px) { 
+@media (max-width: 1200px) { 
   
   .consola-contenedor {
     font-size:4vw;
