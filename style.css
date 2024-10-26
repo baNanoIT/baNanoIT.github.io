@@ -262,8 +262,11 @@ p {
 
   
   h1 { font-size: 1.8vw; }
-  p { font-size: 1.5vw; }
   pre { font-size: .8 vw; }
+  p { 
+    font-size: 1.5vw; 
+    font-weight: lighter;
+  }
 
   #txtGet, #txtPost, #txtUpdate, #txtDelete, #separador, #lblRuta { font-size: 1.5vw; }
   #txtFirebase, #txtMongo, #lblRutaMongo, #lblRutaFirebase { font-size: 1vw; }
