@@ -123,8 +123,7 @@ p {
 
 #lblRuta {
   font-weight: lighter;
-  color: #f1f1f1;
-  
+  color: #f1f1f1; 
 }
 
 #lblTitulos {
@@ -199,3 +198,143 @@ p {
   height: 40%;
 }
 
+
+@media (max-width: 1366px) { 
+  .consola-contenedor {
+    font-size:3vw;
+    height: 6vw;
+  }
+
+  main section {
+    margin-top:1.5vw;
+    margin-bottom: 1.5vw; 
+  }
+
+  
+  h1 { font-size: 2.8vw; }
+  pre { font: size 1vw; }
+  p { 
+    font-size: 1.8vw; 
+    font-weight: lighter;
+  }
+
+  #txtGet, #txtPost, #txtUpdate, #txtDelete, #separador, #lblRuta { font-size: 1.45vw; } /* Cuadro de las rutas GET | ....*/
+  #txtFirebase, #txtMongo, #lblRutaMongo, #lblRutaFirebase { font-size: 1.5vw; } /* Cuadro de código de las conexiones */
+  #lblSubAgregar, #lblSubObtener, #lblSubEliminar, #lblSubActualizar, #lblSubCrear, #lblSubFirebase, #lblSubMongo { font-size: 3vw; } 
+  #lblFinal { 
+    font-size: 2vw; 
+    font-style: italic;
+  }
+
+  #lista li { 
+    font-size:1.5vw;
+    font-weight: 200; 
+  }
+  
+  #separacion { 
+    font-size: 1.5vw;
+  }
+
+  #preRutas { 
+    font-size: 0.2vw;
+    align-items: flex-start;
+    padding-top: 30px;
+    padding-bottom: 40px;
+  }
+
+  .contenedor-imagenes img {
+    width: 25%; 
+    height: 25%;
+  }
+
+}/* Media Query Max 1366*/
+
+@media (min-width: 1366px) { 
+  .consola-contenedor {
+    font-size:2.5vw;
+    height: 5vw;
+  }
+
+  main section {
+    margin-top: 3vw;
+    margin-bottom: 3vw; 
+  }
+
+  
+  h1 { font-size: 1.8vw; }
+  p { font-size: 1.5vw; }
+  pre { font-size: .8 vw; }
+
+  #txtGet, #txtPost, #txtUpdate, #txtDelete, #separador, #lblRuta { font-size: 1.5vw; }
+  #txtFirebase, #txtMongo, #lblRutaMongo, #lblRutaFirebase { font-size: 1vw; }
+  #lblSubAgregar, #lblSubObtener, #lblSubEliminar, #lblSubActualizar, #lblSubCrear, #lblSubFirebase, #lblSubMongo { font-size: 1.8vw; }
+  #lblFinal { font-size: 2.2vw; }
+  #lista li { font-size:1.2vw; }
+  
+  #separacion { 
+    font-size: 1.3vw;
+    text-align: center;
+  }
+
+  #preRutas { 
+    font-size: 0.5vw;
+    align-items: flex-start;
+    padding-top: 30px;
+    padding-bottom: 40px;
+  }
+
+  .contenedor-imagenes img {
+    width: 15%; 
+    height: 15%;
+  }
+} /* Media Query Min 1366*/
+
+@media (max-width: 800px) { 
+  
+  .consola-contenedor {
+    font-size:4vw;
+    height: 8vw;
+  }
+
+  main section {
+    margin-top:1.5vw;
+    margin-bottom: 1.5vw; 
+  }
+
+  
+  h1 { font-size: 5vw; }
+  pre { font: size 1vw; }
+  p { 
+    font-size: 3.5vw; 
+    font-weight: lighter;
+  }
+
+  #txtGet, #txtPost, #txtUpdate, #txtDelete, #separador, #lblRuta { font-size: 1.8vw; } /* Cuadro de las rutas GET | ....*/
+  #txtFirebase, #txtMongo, #lblRutaMongo, #lblRutaFirebase { font-size: 2.2vw; } /* Cuadro de código de las conexiones */
+  #lblSubAgregar, #lblSubObtener, #lblSubEliminar, #lblSubActualizar, #lblSubCrear, #lblSubFirebase, #lblSubMongo { font-size: 5vw; } 
+  #lblFinal { 
+    font-size: 3vw; 
+    font-style: italic;
+  }
+
+  #lista li { 
+    font-size:1.5vw;
+    font-weight: 200; 
+  }
+  
+  #separacion { 
+    font-size: 1.5vw;
+  }
+
+  #preRutas { 
+    font-size: 0.2vw;
+    align-items: flex-start;
+    padding-top: 30px;
+    padding-bottom: 40px;
+  }
+
+  .contenedor-imagenes img {
+    width: 25%; 
+    height: 25%;
+  }
+} /* Media Query Max 800*/

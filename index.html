@@ -31,9 +31,9 @@
     </section>
     <section>
       <h1 id="lblTitulos">Base de datos</h1>
-      <p id="contenido">TaskProject hace uso del formato JSON para poder preservar la información de cada usuario.
-        Para poder tener disponibilidad 24/7 alrededor del globo esta información es almacenada en la nube, específicamente 
-        Firebase de AWS y Mongo Atlas de MongoDB. 
+      <p id="contenido">TaskProject hace uso del formato JSON para poder preservar la información de cada usuario y a su vez tener 
+        disponibilidad 24/7 alrededor del globo. Esta información es almacenada en la nube, específicamente Firebase de Google y 
+        por otro lado un entrono local MongoDBCompass de MongoDB. 
         <br><br> 
         Cabe resaltar que Flare Dev. Team está en la quiebra por lo que el servicio prestado através de la nube es gratuito 
         en ambas plataformas (alivianenos con una feria por favor).
@@ -41,8 +41,8 @@
       <br>
     
       <div class="contenedor-imagenes">
-        <img src="https://d7umqicpi7263.cloudfront.net/img/product/be121f70-b5c4-4187-bd84-84091c49d66a.png" alt="Imagen 1">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/New_Firebase_logo.svg/1024px-New_Firebase_logo.svg.png" alt="Imagen 2">
+        <img src="https://imgs.search.brave.com/wogGFlV74U1CgjsNRWWIzypRF5_47WxKAxntimKsmgo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/aWNvbi1pY29ucy5j/b20vaWNvbnMyLzMw/NTMvUE5HLzUxMi9t/b25nb2RiX2NvbXBh/c3NfbWFjb3NfYmln/c3VyX2ljb25fMTg5/OTMzLnBuZw" alt="Imagen 1">
+        <img src="https://imgs.search.brave.com/GNKXp4fOLtDtWTC7aGKCApuTi4AwbJgOFH2yE29-9-Y/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdHls/ZXMucmVkZGl0bWVk/aWEuY29tL3Q1XzMw/MXFrL3N0eWxlcy9j/b21tdW5pdHlJY29u/X2JxNzE1ZW82dDUy/ZDEucG5n" alt="Imagen 2">
       </div>
       
       <h2 id="lblSubMongo">MongoDB Atlas</h2>
@@ -53,7 +53,7 @@
         <br>
   <a id="txtMongo">Método para realizar la conexión con Mongo Atlas</a>  
         <br>
-  <code id="lblRuta">const getMongoConnection = async () => {
+  <code id="lblRutaMongo">const getMongoConnection = async () => {
       try {
         const client = await MongoClient.connect(mongoUrl);
         return client.db();
@@ -71,10 +71,10 @@
       </p>
       <pre><br>
   <a id="txtFirebase">Método para realizar la conexión con Firebase</a><br>
-  <code id="lblRuta">admin.initializeApp({
+  <code id="lblRutaFirebase">admin.initializeApp({
       credential: admin.credential.cert(serviceAccount)
     });
-</code>
+  </code>
 </pre> 
     </section>
 
@@ -97,17 +97,17 @@
         La ruta Get All Tasks se ejecuta al momento de querer acceder a toda la información, consultando 
         todas las tareas registrados en la base de datos.
       </p>
-      <pre><a id="txtGet"> Get All Tasks</a> <a id="separacion"> |</a> <code id="lblRuta">router.get('/', taskController.getAllTasks);</code></pre>
+      <pre id="preRutas"><a id="txtGet"> Get All Tasks</a> <a id="separacion"> |</a> <code id="lblRuta">router.get('/', taskController.getAllTasks);</code></pre>
       <p id="contenido">
         La ruta Get Task By ID se ejecuta cuando el usuario quiere acceder a una tarea en específico 
         (Requiere conocer el ID del proyecto).
       </p>
-      <pre><a id="txtGet"> Get Task By ID</a> <a id="separacion">|</a> <code id="lblRuta">router.get('/:id', taskController.getTaskByID);</code></pre>
+      <pre id="preRutas"><a id="txtGet"> Get Task By ID</a> <a id="separacion">|</a> <code id="lblRuta">router.get('/:id', taskController.getTaskByID);</code></pre>
       <p id="contenido">
         La ruta Get All User se ejecuta al momento de acceder a las taras de un usuario determinado 
         (estamos hablado de una sesión)
       </p>
-      <pre><a id="txtGet"> Get All Users</a> <a id="separacion"> |</a> <code id="lblRuta">router.get('/user/:id', taskController.getAllUserTasks);</code></pre> 
+      <pre id="preRutas"><a id="txtGet"> Get All Users</a> <a id="separacion"> |</a> <code id="lblRuta">router.get('/user/:id', taskController.getAllUserTasks);</code></pre> 
     </section>
     
     <section>
@@ -115,7 +115,7 @@
       <p id="contenido">Las solicitudes POST son las que se utilizan para poder crear nueva información
         dentro de una base de datos. En este caso crear una nueva tarea.
       </p>
-      <pre><a id="txtPost"> Post</a> <a id="separacion">|</a> <code id="lblRuta">router.post('/:id', taskController.createNewTask);</code></pre> 
+      <pre id="preRutas"><a id="txtPost"> Post</a> <a id="separacion">|</a> <code id="lblRuta">router.post('/:id', taskController.createNewTask);</code></pre> 
     </section>
     
     <section>
@@ -127,13 +127,13 @@
         alguna tarea y no se mande por ejemplo una descripción, al actualizar esta estará
         vacía si no se manejan las validaciones necesarias. 
       </p>
-      <pre><a id="txtUpdate"> Put</a> <a id="separacion">|</a> <code id="lblRuta">router.put('/:id', taskController.editTask);</code></pre>
+      <pre id="preRutas"><a id="txtUpdate"> Put</a> <a id="separacion">|</a> <code id="lblRuta">router.put('/:id', taskController.editTask);</code></pre>
 
     <section>
       <h2 id="lblSubEliminar">Eliminar proyecto</h2>
       <p id="contenido">
         Las solicitudes DELETE eliminan un recurso de la base de datos de manera permanente.  
-      </p><pre><a id="txtDelete"> Delete</a> <a id="separacion">|</a> <code id="lblRuta">router.delete('/:id', taskController.deleteTaskByID);</code></pre> 
+      </p><pre id="preRutas"><a id="txtDelete"> Delete</a> <a id="separacion">|</a> <code id="lblRuta">router.delete('/:id', taskController.deleteTaskByID);</code></pre> 
     </section>
     <h2 id="lblFinal">¿Si leyeron la parte de la conexión de la base de datos?</h2>
     <br>
