@@ -60,22 +60,6 @@ main section {
 }
   
 
-/*#################*/
-/* Bloques de Ruta */
-/*#################*/
-pre {
-    background-color: #3e3e3e;
-    color: whitesmoke;
-    border: 1px solid #ebebeb;             
-    margin-left: 10%;
-    margin-right: 10%;
-    border-radius: 10px;      
-    padding-left: 3%;
-    overflow: auto;          
-    font-family: monospace;   
-    font-size:1.2vw;
-}
-
 /*###########*/
 /*Encabezados*/
 /*###########*/
@@ -100,6 +84,71 @@ p {
     margin-left: 10%;
     display: flex; 
 }
+
+
+
+/*#################*/
+/* Bloques de Ruta */
+/*#################*/
+pre {
+  background-color: #3e3e3e;
+  color: whitesmoke;
+  border: 1px solid #ebebeb;             
+  margin-left: 10%;
+  margin-right: 10%;
+  border-radius: 10px;      
+  padding-left: 3%;
+  overflow: auto;          
+  font-family: monospace;   
+  font-size:1.2vw;
+}
+
+#DivBotones {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Espacio entre los botones */
+}
+
+#btnMongo, #btnFirebase {
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 10%;
+  margin-right: 10%;
+  width: 80%;            /* 80% del ancho del contenedor */
+  max-width: 20%;      /* Ancho máximo de 200px */
+  padding: 10px 0;
+  font-size: 1.2vw;     /* Ajusta el tamaño de fuente según el tamaño de la pantalla */
+  
+}
+
+
+#btnMongo {
+  background-color: #227a4d;
+  color: rgb(222, 222, 222);
+  border: 1px solid #227a4d;
+  size: 3vw;
+}
+
+#btnMongo:hover {
+  background-color: #3ab475;
+}
+
+#btnFirebase {
+  background-color: #c18341;
+  color: rgb(222, 222, 222);
+  border: 1px solid #c18341;
+}
+
+#btnFirebase:hover {
+  background-color: #e09a50;
+}
+
+
+#salidaDeleteTask, #salidaPutTask, #salidaPostTask, #salidaGetTask {
+  font-size: 1.5vw;
+}
+
 
 /* Diseño de los textos de las rutas */
 #txtGet, #txtUpdate, #txtPost, #txtDelete, #txtMongo, #txtFirebase { font-weight: 900; }
@@ -218,7 +267,7 @@ p {
     font-weight: lighter;
   }
 
-  #txtGet, #txtPost, #txtUpdate, #txtDelete, #separador, #lblRuta { font-size: 1.45vw; } /* Cuadro de las rutas GET | ....*/
+  #txtGet, #txtPost, #txtUpdate, #txtDelete, #separador, #lblRuta, #salidaDeleteTask, #salidaPutTask, #salidaPostTask, #salidaGetAll, #salidaGetById, #salidaGetAllUserTask { font-size: 1.45vw; } /* Cuadro de las rutas GET | ....*/
   #txtFirebase, #txtMongo, #lblRutaMongo, #lblRutaFirebase { font-size: 1.5vw; } /* Cuadro de código de las conexiones */
   #lblSubAgregar, #lblSubObtener, #lblSubEliminar, #lblSubActualizar, #lblSubCrear, #lblSubFirebase, #lblSubMongo { font-size: 3vw; } 
   #lblFinal { 
@@ -268,7 +317,7 @@ p {
     font-weight: lighter;
   }
 
-  #txtGet, #txtPost, #txtUpdate, #txtDelete, #separador, #lblRuta { font-size: 1.5vw; }
+  #txtGet, #txtPost, #txtUpdate, #txtDelete, #separador, #lblRuta, #salidaDeleteTask, #salidaPutTask, #salidaPostTask, #salidaGetAll, #salidaGetById, #salidaGetAllUserTask { font-size: 1.5vw; }
   #txtFirebase, #txtMongo, #lblRutaMongo, #lblRutaFirebase { font-size: 1vw; }
   #lblSubAgregar, #lblSubObtener, #lblSubEliminar, #lblSubActualizar, #lblSubCrear, #lblSubFirebase, #lblSubMongo { font-size: 1.8vw; }
   #lblFinal { font-size: 2.2vw; }
@@ -306,13 +355,13 @@ p {
 
   
   h1 { font-size: 5vw; }
-  pre { font: size 1vw; }
+  pre { font: 1vw; }
   p { 
     font-size: 3.5vw; 
     font-weight: lighter;
   }
 
-  #txtGet, #txtPost, #txtUpdate, #txtDelete, #separador, #lblRuta { font-size: 1.8vw; } /* Cuadro de las rutas GET | ....*/
+  #txtGet, #txtPost, #txtUpdate, #txtDelete, #separador, #lblRuta, #salidaDeleteTask, #salidaPutTask, #salidaPostTask, #salidaGetAll, #salidaGetById, #salidaGetAllUserTask { font-size: 3vw; } /* Cuadro de las rutas GET | ....*/
   #txtFirebase, #txtMongo, #lblRutaMongo, #lblRutaFirebase { font-size: 2.2vw; } /* Cuadro de código de las conexiones */
   #lblSubAgregar, #lblSubObtener, #lblSubEliminar, #lblSubActualizar, #lblSubCrear, #lblSubFirebase, #lblSubMongo { font-size: 5vw; } 
   #lblFinal { 
@@ -327,6 +376,10 @@ p {
   
   #separacion { 
     font-size: 1.5vw;
+  }
+
+  #salidaDeleteTask, #salidaPutTask, #salidaPostTask, #salidaGetTask {
+    font-size: 3vw;
   }
 
   #preRutas { 

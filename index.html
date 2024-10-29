@@ -88,6 +88,10 @@
     </section>
   
     <section>
+      
+      <!-- GET ALL -->
+      
+      
       <h2 id="lblSubObtener">Obtener Información</h2>
       <p id="contenido">
         Las solicitudes GET son aquellas que el usuarios sin saberlo manda al servidor para obtener 
@@ -97,27 +101,84 @@
         La ruta Get All Tasks se ejecuta al momento de querer acceder a toda la información, consultando 
         todas las tareas registrados en la base de datos.
       </p>
-      <pre id="preRutas"><a id="txtGet"> Get All Tasks</a> <a id="separacion"> |</a> <code id="lblRuta">router.get('/', taskController.getAllTasks);</code></pre>
+      <pre id="preRutas"><a id="txtGet"> Get All Tasks</a> <a id="separacion">|</a> <code id="lblRuta">localhost:3000/api/mongodb/task/ </code>
+
+<a id="txtGet"> Get All Tasks</a> <a id="separacion">|</a> <code id="lblRuta">localhost:3000/api/firebase/task/</code></pre>
+      <div id="DivBotones">
+        <button id="btnMongo"  onclick="mostrarJSON('getAll')">Ejecutar en MongoDB</button>
+        <button id="btnFirebase" onclick="mostrarJSON('getAll')">Ejecutar en Firebase</button>
+      </div>
+      
+      <pre id="preRutas"><a id="txtGet">Resultado</a> <a id="separacion">|</a> 
+<code id="salidaGetAll"></code>
+      </pre>
+
+
+
+
+      <!-- GET BY ID -->
       <p id="contenido">
         La ruta Get Task By ID se ejecuta cuando el usuario quiere acceder a una tarea en específico 
         (Requiere conocer el ID del proyecto).
-      </p>
-      <pre id="preRutas"><a id="txtGet"> Get Task By ID</a> <a id="separacion">|</a> <code id="lblRuta">router.get('/:id', taskController.getTaskByID);</code></pre>
+      </p>S
+      <pre id="preRutas"><a id="txtGet"> Get Task By ID</a> <a id="separacion">|</a> <code id="lblRuta">localhost:3000/api/mongodb/task/a7c4e5f-cc77-4fba-9fde-43b41caef380</code></pre>
+     <!-- <pre id="preRutas"><a id="txtGet"> Get Task By ID</a> <a id="separacion">|</a> <code id="lblRuta">localhost:3000/api/mongodb/task/a7c4e5f-cc77-4fba-9fde-43b41caef380</code></pre> -->
+      <div id="DivBotones">
+        <button id="btnMongo"  onclick="mostrarJSON('getById')">Ejecutar en MongoDB</button>
+        <button id="btnFirebase" onclick="mostrarJSON('getById')">Ejecutar en Firebase</button>
+      </div>
+      
+      <pre id="preRutas"><a id="txtGet">Resultado</a> <a id="separacion">|</a> 
+<code id="salidaGetById"></code>
+      </pre>
+
+
+
+      <!-- GET ALL USERS -->
       <p id="contenido">
         La ruta Get All User se ejecuta al momento de acceder a las taras de un usuario determinado 
         (estamos hablado de una sesión)
       </p>
       <pre id="preRutas"><a id="txtGet"> Get All Users</a> <a id="separacion"> |</a> <code id="lblRuta">router.get('/user/:id', taskController.getAllUserTasks);</code></pre> 
+      <!-- <pre id="preRutas"><a id="txtGet"> Get Task By ID</a> <a id="separacion">|</a> <code id="lblRuta">localhost:3000/api/mongodb/task/a7c4e5f-cc77-4fba-9fde-43b41caef380</code></pre> -->
+      <div id="DivBotones">
+        <button id="btnMongo"  onclick="mostrarJSON('getAllUserTask')">Ejecutar en MongoDB</button>
+        <button id="btnFirebase" onclick="mostrarJSON('getAllUserTask')">Ejecutar en Firebase</button>
+      </div>
+      
+      <pre id="preRutas"><a id="txtGet">Resultado</a> <a id="separacion">|</a> 
+<code id="salidaGetAllUserTask"></code>
+      </pre>
     </section>
     
+
+
+    <!-- POST TASK -->>
     <section>
-      <h2 id="lblSubCrear">Crear proyecto</h2>
+      <h2 id="lblSubCrear">Crear Tarea</h2>
       <p id="contenido">Las solicitudes POST son las que se utilizan para poder crear nueva información
-        dentro de una base de datos. En este caso crear una nueva tarea.
+        dentro de una base de datos. En este caso crear una nueva tarea.<br>Por ejemplo supongamos que
+        tenemos una archivo JSON con las siguiente propiedades:<br>"title": "TareaPost", "body": "TareaPostUsuarioAdmin",
+        "creation_date": "28/10/2024, 20:35:28", "completed": false.
+        <br> <br>
+        Podemos probar como reaccionaría el sistema al momento de generar un post sobre este JSON (estamos con un usuario llamado admin).
       </p>
-      <pre id="preRutas"><a id="txtPost"> Post</a> <a id="separacion">|</a> <code id="lblRuta">router.post('/:id', taskController.createNewTask);</code></pre> 
+      <pre id="preRutas"><a id="txtPost"> Post</a> <a id="separacion">|</a> <code id="lblRuta">localhost:3000/api/mongodb/task/</code></pre> 
+      <!-- <pre id="preRutas"><a id="txtGet"> Get Task By ID</a> <a id="separacion">|</a> <code id="lblRuta">localhost:3000/api/mongodb/task/a7c4e5f-cc77-4fba-9fde-43b41caef380</code></pre> -->
+      <div id="DivBotones">
+        <button id="btnMongo"  onclick="mostrarJSON('postTask')">Ejecutar en MongoDB</button>
+        <button id="btnFirebase" onclick="mostrarJSON('postTask')">Ejecutar en Firebase</button>
+      </div>
+      
+      <pre id="preRutas"><a id="txtPost">Resultado</a> <a id="separacion">|</a> 
+<code id="salidaPostTask"></code>
+      </pre>
+    
     </section>
     
+
+    <!-- PUT -->
+
     <section>
       <h2 id="lblSubActualizar">Actualizar proyecto</h2>
       <p id="contenido">
@@ -125,20 +186,48 @@
         <br><br>
         Nota: Sobreescribe la información. En dado caso que se llegara actualizar
         alguna tarea y no se mande por ejemplo una descripción, al actualizar esta estará
-        vacía si no se manejan las validaciones necesarias. 
-      </p>
-      <pre id="preRutas"><a id="txtUpdate"> Put</a> <a id="separacion">|</a> <code id="lblRuta">router.put('/:id', taskController.editTask);</code></pre>
+        vacía si no se manejan las validaciones necesarias. <br><br>
 
+        Ahora supongamos que queremos actualizar la tarea creada en el punto de POST, dicha actualización
+        contiene la siguiente información:
+        id: f92d8b67-5c4f-4e34-8a86-fadea57a5892, title: Servicios Web Put, body: Esta tarea ha servido de ejemplo para realizar una actualización PUT
+      </p>
+      <pre id="preRutas"><a id="txtUpdate"> Put</a> <a id="separacion">|</a> <code id="lblRuta">localhost:3000/api/mongodb/task/f92d8b67-5c4f-4e34-8a86-fadea57a5892</code></pre>
+      <!-- <pre id="preRutas"><a id="txtGet"> Get Task By ID</a> <a id="separacion">|</a> <code id="lblRuta">localhost:3000/api/mongodb/task/a7c4e5f-cc77-4fba-9fde-43b41caef380</code></pre> -->
+      <div id="DivBotones">
+        <button id="btnMongo"  onclick="mostrarJSON('putTask')">Ejecutar en MongoDB</button>
+        <button id="btnFirebase" onclick="mostrarJSON('putTask')">Ejecutar en Firebase</button>
+      </div>
+      
+      <pre id="preRutas"><a id="txtUpdate">Resultado</a> <a id="separacion">|</a> 
+<code id="salidaPutTask"></code>
+      </pre>
+
+    <!-- Delete -->
     <section>
       <h2 id="lblSubEliminar">Eliminar proyecto</h2>
       <p id="contenido">
-        Las solicitudes DELETE eliminan un recurso de la base de datos de manera permanente.  
-      </p><pre id="preRutas"><a id="txtDelete"> Delete</a> <a id="separacion">|</a> <code id="lblRuta">router.delete('/:id', taskController.deleteTaskByID);</code></pre> 
+        Las solicitudes DELETE eliminan un recurso de la base de datos de manera permanente.  <br><br>
+        Ahora supongamos que queremos ELIMINAR la tarea anteriormente actualizada, solo necesitaríamos conocer el ID f92d8b67-5c4f-4e34-8a86-fadea57a5892
+      </p><pre id="preRutas"><a id="txtDelete"> Delete</a> <a id="separacion">|</a> <code id="lblRuta">localhost:3000/api/mongodb/task/f92d8b67-5c4f-4e34-8a86-fadea57a5892</code></pre> 
+      <!-- <pre id="preRutas"><a id="txtGet"> Get Task By ID</a> <a id="separacion">|</a> <code id="lblRuta">localhost:3000/api/mongodb/task/a7c4e5f-cc77-4fba-9fde-43b41caef380</code></pre> -->
+      <div id="DivBotones">
+        <button id="btnMongo"  onclick="mostrarJSON('deleteTask')">Ejecutar en MongoDB</button>
+        <button id="btnFirebase" onclick="mostrarJSON('deleteTask')">Ejecutar en Firebase</button>
+      </div>
+      
+      <pre id="preRutas"><a id="txtDelete">Resultado</a> <a id="separacion">|</a> 
+<code id="salidaDeleteTask"></code>
+      </pre>
+    
+    
     </section>
     <h2 id="lblFinal">¿Si leyeron la parte de la conexión de la base de datos?</h2>
     <br>
   </main>
 
   <script src="logica.js"></script>
+  <script src="json.js"></script>
+  
 </body>
 </html>
