@@ -104,11 +104,12 @@
       <pre id="preRutas"><a id="txtGet"> Get All Tasks</a> <a id="separacion">|</a> <code id="lblRuta">localhost:3000/api/mongodb/task/ </code>
 
 <a id="txtGet"> Get All Tasks</a> <a id="separacion">|</a> <code id="lblRuta">localhost:3000/api/firebase/task/</code></pre>
+      <br>
       <div id="DivBotones">
         <button id="btnMongo"  onclick="mostrarJSON('getAll')">Ejecutar en MongoDB</button>
         <button id="btnFirebase" onclick="mostrarJSON('getAll')">Ejecutar en Firebase</button>
       </div>
-      
+      <br>
       <pre id="preRutas"><a id="txtGet">Resultado</a> <a id="separacion">|</a> 
 <code id="salidaGetAll"></code>
       </pre>
@@ -123,11 +124,12 @@
       </p>S
       <pre id="preRutas"><a id="txtGet"> Get Task By ID</a> <a id="separacion">|</a> <code id="lblRuta">localhost:3000/api/mongodb/task/a7c4e5f-cc77-4fba-9fde-43b41caef380</code></pre>
      <!-- <pre id="preRutas"><a id="txtGet"> Get Task By ID</a> <a id="separacion">|</a> <code id="lblRuta">localhost:3000/api/mongodb/task/a7c4e5f-cc77-4fba-9fde-43b41caef380</code></pre> -->
-      <div id="DivBotones">
+     <br> 
+     <div id="DivBotones">
         <button id="btnMongo"  onclick="mostrarJSON('getById')">Ejecutar en MongoDB</button>
         <button id="btnFirebase" onclick="mostrarJSON('getById')">Ejecutar en Firebase</button>
       </div>
-      
+      <br>
       <pre id="preRutas"><a id="txtGet">Resultado</a> <a id="separacion">|</a> 
 <code id="salidaGetById"></code>
       </pre>
@@ -139,12 +141,14 @@
         La ruta Get All User se ejecuta al momento de acceder a las taras de un usuario determinado 
         (estamos hablado de una sesión)
       </p>
-      <pre id="preRutas"><a id="txtGet"> Get All Users</a> <a id="separacion"> |</a> <code id="lblRuta">router.get('/user/:id', taskController.getAllUserTasks);</code></pre> 
+      <pre id="preRutas"><a id="txtGet"> Get All Users</a> <a id="separacion"> |</a> <code id="lblRuta">localhost:3000/api/mongodb/task/user/Banano</code></pre> 
       <!-- <pre id="preRutas"><a id="txtGet"> Get Task By ID</a> <a id="separacion">|</a> <code id="lblRuta">localhost:3000/api/mongodb/task/a7c4e5f-cc77-4fba-9fde-43b41caef380</code></pre> -->
+      <br>
       <div id="DivBotones">
         <button id="btnMongo"  onclick="mostrarJSON('getAllUserTask')">Ejecutar en MongoDB</button>
         <button id="btnFirebase" onclick="mostrarJSON('getAllUserTask')">Ejecutar en Firebase</button>
       </div>
+      <br>
       
       <pre id="preRutas"><a id="txtGet">Resultado</a> <a id="separacion">|</a> 
 <code id="salidaGetAllUserTask"></code>
@@ -165,11 +169,13 @@
       </p>
       <pre id="preRutas"><a id="txtPost"> Post</a> <a id="separacion">|</a> <code id="lblRuta">localhost:3000/api/mongodb/task/</code></pre> 
       <!-- <pre id="preRutas"><a id="txtGet"> Get Task By ID</a> <a id="separacion">|</a> <code id="lblRuta">localhost:3000/api/mongodb/task/a7c4e5f-cc77-4fba-9fde-43b41caef380</code></pre> -->
+      <br>
       <div id="DivBotones">
         <button id="btnMongo"  onclick="mostrarJSON('postTask')">Ejecutar en MongoDB</button>
         <button id="btnFirebase" onclick="mostrarJSON('postTask')">Ejecutar en Firebase</button>
       </div>
-      
+      <br>
+
       <pre id="preRutas"><a id="txtPost">Resultado</a> <a id="separacion">|</a> 
 <code id="salidaPostTask"></code>
       </pre>
@@ -194,10 +200,12 @@
       </p>
       <pre id="preRutas"><a id="txtUpdate"> Put</a> <a id="separacion">|</a> <code id="lblRuta">localhost:3000/api/mongodb/task/f92d8b67-5c4f-4e34-8a86-fadea57a5892</code></pre>
       <!-- <pre id="preRutas"><a id="txtGet"> Get Task By ID</a> <a id="separacion">|</a> <code id="lblRuta">localhost:3000/api/mongodb/task/a7c4e5f-cc77-4fba-9fde-43b41caef380</code></pre> -->
+      <br>
       <div id="DivBotones">
         <button id="btnMongo"  onclick="mostrarJSON('putTask')">Ejecutar en MongoDB</button>
         <button id="btnFirebase" onclick="mostrarJSON('putTask')">Ejecutar en Firebase</button>
       </div>
+      <br>
       
       <pre id="preRutas"><a id="txtUpdate">Resultado</a> <a id="separacion">|</a> 
 <code id="salidaPutTask"></code>
@@ -211,10 +219,12 @@
         Ahora supongamos que queremos ELIMINAR la tarea anteriormente actualizada, solo necesitaríamos conocer el ID f92d8b67-5c4f-4e34-8a86-fadea57a5892
       </p><pre id="preRutas"><a id="txtDelete"> Delete</a> <a id="separacion">|</a> <code id="lblRuta">localhost:3000/api/mongodb/task/f92d8b67-5c4f-4e34-8a86-fadea57a5892</code></pre> 
       <!-- <pre id="preRutas"><a id="txtGet"> Get Task By ID</a> <a id="separacion">|</a> <code id="lblRuta">localhost:3000/api/mongodb/task/a7c4e5f-cc77-4fba-9fde-43b41caef380</code></pre> -->
+      <br>
       <div id="DivBotones">
         <button id="btnMongo"  onclick="mostrarJSON('deleteTask')">Ejecutar en MongoDB</button>
         <button id="btnFirebase" onclick="mostrarJSON('deleteTask')">Ejecutar en Firebase</button>
       </div>
+      <br>
       
       <pre id="preRutas"><a id="txtDelete">Resultado</a> <a id="separacion">|</a> 
 <code id="salidaDeleteTask"></code>
